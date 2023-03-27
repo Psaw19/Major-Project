@@ -261,14 +261,14 @@ function YogaCanvas() {
   if (isStartPose) {
     runMovenet();
     return (
-      <div className="">
+      <div>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-3 my-6">
           <div className="flex gap-3">
             <h4 className="btn">Pose Time: {poseTime} s</h4>
             <h4 className="btn">Best: {bestPerform} s</h4>
           </div>
-          <div className="">
+          <div>
             <button onClick={() => { navigate(`/start`) }} className="btn effect">
               Stop Pose
             </button>
@@ -305,6 +305,3 @@ function YogaCanvas() {
 }
 
 export default YogaCanvas;
-
-
-// https://api.jsonserve.com/rDP1hH
