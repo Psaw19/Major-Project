@@ -33,20 +33,23 @@ function YogaCanvas() {
   } = useContext(YogaContext);
 
   let navigate = useNavigate();
+  const scale = window.innerWidth > 639 ? 1 : 0.5625;
+  const videoWidth = 640 * scale;
+  const videoHeight = 480 * scale;
+  // console.log(scale, videoHeight, videoWidth);
 
-  const screen = 639;
+  // const screen = 639;
+  // const [width, setWidth] = useState(window.innerWidth);
+  // const [videoWidth, setVideoWidth] = useState(width > screen ? 640 : 360);
+  // const [videoHeight, setVideoHeight] = useState(width > screen ? 480 : 270);
 
-  const [width, setWidth] = useState(window.innerWidth);
-  const [videoWidth, setVideoWidth] = useState(width > screen ? 640 : 360);
-  const [videoHeight, setVideoHeight] = useState(width > screen ? 480 : 270);
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    setVideoWidth(width > screen ? 640 : 360);
-    setVideoHeight(width > screen ? 480 : 270);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [width]);
+  // useEffect(() => {
+  //   const handleResize = () => setWidth(window.innerWidth);
+  //   window.addEventListener('resize', handleResize);
+  //   setVideoWidth(width > screen ? 640 : 360);
+  //   setVideoHeight(width > screen ? 480 : 270);
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
 
   useEffect(() => {
     const timeDiff = (currentTime - startingTime) / 1000;
@@ -172,7 +175,7 @@ function YogaCanvas() {
       "https://models.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
       // model
     )
-    console.log(poseClassifier)
+    // console.log(poseClassifier)
     // console.log(modelData)
     const countAudio = new Audio(count);
     countAudio.loop = true;
@@ -194,7 +197,7 @@ function YogaCanvas() {
       ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
       try {
         const keypoints = pose[0].keypoints;
-        const scale = width > screen ? 1 : 0.5625;
+        // const scale = width > screen ? 1 : 0.5625;
         let input = keypoints.map((keypoint) => {
           if (keypoint.score > 0.4) {
             if (
