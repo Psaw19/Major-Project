@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .btn {
+        @apply border-2 border-slate-400  rounded-md px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl;
+    }
+
+    .effect{
+        @apply shadow-lg hover:shadow-none bg-[#f4f7f4] hover:bg-green-200;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
