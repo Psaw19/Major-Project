@@ -8,7 +8,6 @@ import { drawPoint, drawSegment } from "../utils/helper";
 import Webcam from "react-webcam";
 import { count } from "../utils/music";
 import { useNavigate } from "react-router-dom";
-import modelData from "/src/model/model.json";
 
 // flag variable is used to help capture the time when AI just detect
 // the pose as correct(probability more than threshold)
