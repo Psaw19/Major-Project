@@ -5,7 +5,6 @@ import { GrMenu, GrClose } from "react-icons/gr"
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
-    // const [show, setShow] = useState(false);
     const navRef = useRef();
     const ref = useRef();
 
@@ -47,12 +46,16 @@ const Navbar = () => {
 
                 <div ref={navRef} className={`absolute left-0 ${toggle ? 'top-[100%]' : 'top-[-500%]'} transition-all duration-300 z-10 flex flex-col items-center justify-center w-full bg-black/30 backdrop-blur p-2`}>
 
-                    <Link to='/' onClick={() => setToggle(toggle => !toggle)} >
-                        <button className='p-2'>Home</button>
+                    <Link to='/' onClick={() => setToggle(toggle => !toggle)} className='w-full'>
+                        <button className='p-3 w-full'>Home</button>
                     </Link>
 
-                    <Link to='/about' onClick={() => setToggle(toggle => !toggle)}>
-                        <button className='p-2'>About</button>
+                    <Link to='/about' onClick={() => setToggle(toggle => !toggle)} className='w-full'>
+                        <button className='p-3 w-full'>About</button>
+                    </Link>
+
+                    <Link to='/start' onClick={() => setToggle(toggle => !toggle)} className='w-full'>
+                        <button className='p-3 w-full'>Start</button>
                     </Link>
 
                 </div>
