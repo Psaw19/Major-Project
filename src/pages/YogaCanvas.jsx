@@ -33,9 +33,13 @@ function YogaCanvas() {
   } = useContext(YogaContext);
 
   let navigate = useNavigate();
-  const scale = window.innerWidth > 639 ? 1 : 0.5625;
-  const videoWidth = 640 * scale;
+  const scale = window.innerWidth > 639 ? 1 : 0.75;
+  const widthScale = window.innerWidth > 639 ? 1 : 0.5625;
+  const videoWidth = 640 * widthScale;
   const videoHeight = 480;
+  // const scaleX = 0.75;
+  // const scaleY = 0.75;
+
   // console.log(scale, videoHeight, videoWidth);
 
   // const screen = 639;
@@ -192,9 +196,6 @@ function YogaCanvas() {
     ) {
       let notDetected = 0;
       const video = webcamRef.current.video;
-      // video.width = videoWidth;
-      // video.height = videoHeight;
-      // console.log(video.width);
       const pose = await detector.estimatePoses(video);
       const ctx = canvasRef.current.getContext("2d");
       ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
@@ -206,17 +207,17 @@ function YogaCanvas() {
             if (
               !(keypoint.name === "left_eye" || keypoint.name === "right_eye")
             ) {
-              drawPoint(ctx, keypoint.x * scale, keypoint.y, 6 * scale, "rgb(0,255,255)");
+              drawPoint(ctx, keypoint.x * scale, keypoint.y * scale, 6 * scale, "rgb(0,255,255)");
               let connections = keypointConnections[keypoint.name];
               try {
                 connections.forEach((connection) => {
                   let conName = connection.toUpperCase();
                   drawSegment(
                     ctx,
-                    [keypoint.x * scale, keypoint.y],
+                    [keypoint.x * scale, keypoint.y * scale],
                     [
                       keypoints[POINTS[conName]].x * scale,
-                      keypoints[POINTS[conName]].y,
+                      keypoints[POINTS[conName]].y * scale,
                     ],
                     skeletonColor
                   );
