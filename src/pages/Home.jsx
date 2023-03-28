@@ -12,7 +12,7 @@ const Home = () => {
             <div className='w-full max-w-[1280px] mx-auto flex flex-col md:flex-row-reverse items-center'>
 
 
-                <div className='w-full md:w-[45%] mx-auto h-[300px] lg:h-[400px] xl:h-[500px] bg-no-repeat bg-center bg-contain animate-changeBg'></div>
+                <div className='w-full md:w-[45%] mx-auto h-[300px] lg:h-[400px] xl:h-[500px] bg-no-repeat bg-center bg-contain bg-animation'></div>
 
                 <div className='w-full md:w-[55%] px-5 sm:px-8 text-center sm:text-left'>
 

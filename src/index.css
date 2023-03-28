@@ -19,3 +19,18 @@
     margin: 0;
     padding: 0;
 }
+
+.bg-animation{
+    animation: animateBg 20s ease infinite;
+}
+
+@keyframes animateBg {
+        0% { background-image: url('./utils/pose_images/chair.png'); }
+      14% { background-image: url('./utils/pose_images/dog.png');}
+      28% { background-image: url('./utils/pose_images/tree.png');}
+      42% { background-image: url('./utils/pose_images/triangle.png');}
+      56% { background-image: url('./utils/pose_images/cobra.png');}
+      70% { background-image: url('./utils/pose_images/warrior.png');}
+      85% { background-image: url('./utils/pose_images/shoulderstand.png');}
+      100% { background-image: url('./utils/pose_images/chair.png');}
+    }
