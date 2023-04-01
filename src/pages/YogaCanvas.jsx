@@ -273,7 +273,7 @@ function YogaCanvas() {
             <h4 className="btn">Best: {bestPerform} s</h4>
           </div>
           <div>
-            <button onClick={() => { navigate(`/start`) }} className="btn effect">
+            <button onClick={() => { navigate(`/start`) }} className="btn">
               Stop Pose
             </button>
           </div>

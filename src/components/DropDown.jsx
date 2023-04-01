@@ -15,7 +15,7 @@ const DropDown = ({ poseList }) => {
             <Listbox className="w-full">
 
                 <Listbox.Button
-                    className="p-2 text-black flex items-center w-full justify-center gap-2 text-2xl font-medium rounded-lg border relative ">
+                    className="p-2 text-black flex items-center w-full justify-center gap-2 text-2xl font-medium rounded-lg border border-slate-500 relative ">
                     {currentPose} <BsChevronDown className={`mt-2 text-base transition duration-300`} />
 
                     <Listbox.Options className="w-80 border h-48 overflow-auto rounded-lg scrollbar-hide cursor-pointer mt-1 absolute top-12">

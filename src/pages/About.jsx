@@ -19,7 +19,11 @@ export default function About() {
                     We created this as a Major project, and We have also deployed this project
                     so people can use it and mainly the developers can who are learning AI can learn
                     from this project and make their own AI or they can also improve in this project.
-                    This is an open source project, The code is available on the <a className='text-blue-400' href="https://github.com/Rambo8390/YogaFit" >GitHub</a>.
+                    This is an open source project, The code is available on the <a className='text-blue-400'
+                        // href="https://github.com/Rambo8390/YogaFit" 
+                        href="https://github.com/Psaw19/Major-Project"
+                        target='_blank'
+                    >GitHub</a>.
 
                     This AI first predicts keypoints or coordinates of different parts of the body(basically where
                     they are present in an image) and then it use another classification model to classify the poses if
@@ -32,24 +36,27 @@ export default function About() {
                 </p>
 
                 <div className="mx-2 md:mx-4">
-                    <h4 className='font-semibold text-lg text-center my-2 sm:mt-4'>About Team Members</h4>
+                    {/* <h4 className='font-semibold text-lg text-center my-2 sm:mt-4'>About Team Members</h4> */}
+                    <h4 className='font-semibold text-lg text-center my-2 sm:mt-4'>Made By</h4>
 
-                    <div className='grid grid-rows-2 grid-cols-2 w-fit mx-auto gap-2 sm:grid-rows-1 md:grid-cols-4'>
+                    <div className='flex justify-center'>
 
-                        <div className=' text-center text-sm font-semibold'>
+                        {/* <div className='grid grid-rows-2 grid-cols-2 w-fit mx-auto gap-2 sm:grid-rows-1 md:grid-cols-4'> */}
+
+                        {/* <div className=' text-center text-sm font-semibold'>
                             <img className='h-28 mx-auto' src={sagnik}></img>
                             <p>SAGNIK PURKAIT</p>
-                        </div>
+                        </div> */}
 
-                        <div className=' text-center text-sm font-semibold'>
+                        {/* <div className=' text-center text-sm font-semibold'>
                             <img className="h-28 mx-auto" src={mihir}></img>
                             <p>MIHIR SANE</p>
-                        </div>
+                        </div> */}
 
-                        <div className=' text-center text-sm font-semibold'>
+                        {/* <div className=' text-center text-sm font-semibold'>
                             <img className='h-28 mx-auto' src={lakshit}></img>
                             <p>LAKSHIT SHAH</p>
-                        </div>
+                        </div> */}
 
                         <div className=' text-center text-sm font-semibold'>
                             <img className='h-28 mx-auto' src={prashant}></img>
