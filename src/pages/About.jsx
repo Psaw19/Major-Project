@@ -36,27 +36,24 @@ export default function About() {
                 </p>
 
                 <div className="mx-2 md:mx-4">
-                    {/* <h4 className='font-semibold text-lg text-center my-2 sm:mt-4'>About Team Members</h4> */}
-                    <h4 className='font-semibold text-lg text-center my-2 sm:mt-4'>Made By</h4>
+                    <h4 className='font-semibold text-lg text-center my-2 sm:mt-4'>About Team Members</h4>
 
-                    <div className='flex justify-center'>
+                    <div className='grid grid-rows-2 grid-cols-2 w-fit mx-auto gap-2 sm:grid-rows-1 md:grid-cols-4'>
 
-                        {/* <div className='grid grid-rows-2 grid-cols-2 w-fit mx-auto gap-2 sm:grid-rows-1 md:grid-cols-4'> */}
-
-                        {/* <div className=' text-center text-sm font-semibold'>
+                        <div className=' text-center text-sm font-semibold'>
                             <img className='h-28 mx-auto' src={sagnik}></img>
                             <p>SAGNIK PURKAIT</p>
-                        </div> */}
+                        </div>
 
-                        {/* <div className=' text-center text-sm font-semibold'>
+                        <div className=' text-center text-sm font-semibold'>
                             <img className="h-28 mx-auto" src={mihir}></img>
                             <p>MIHIR SANE</p>
-                        </div> */}
+                        </div>
 
-                        {/* <div className=' text-center text-sm font-semibold'>
+                        <div className=' text-center text-sm font-semibold'>
                             <img className='h-28 mx-auto' src={lakshit}></img>
                             <p>LAKSHIT SHAH</p>
-                        </div> */}
+                        </div>
 
                         <div className=' text-center text-sm font-semibold'>
                             <img className='h-28 mx-auto' src={prashant}></img>
