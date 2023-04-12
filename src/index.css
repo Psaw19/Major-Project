@@ -6,12 +6,12 @@
 
 @layer components{
     .btn {
-        @apply border-2 border-slate-400  rounded-md px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl;
+        @apply border-2 border-slate-500  rounded-md px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl;
     }
 
-    .effect{
+    /* .effect{
         @apply shadow-lg hover:shadow-none bg-[#f4f7f4] hover:bg-green-200;
-    }
+    } */
 }
 
 *{
@@ -20,8 +20,16 @@
     padding: 0;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .bg-animation{
     animation: animateBg 20s ease infinite;
+}
+
+.bg-gradient{
+    background-image: linear-gradient(to right,#ffeeee, #ddefbb);
 }
 
 @keyframes animateBg {

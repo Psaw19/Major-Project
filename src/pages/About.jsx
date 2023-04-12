@@ -19,7 +19,11 @@ export default function About() {
                     We created this as a Major project, and We have also deployed this project
                     so people can use it and mainly the developers can who are learning AI can learn
                     from this project and make their own AI or they can also improve in this project.
-                    This is an open source project, The code is available on the <a className='text-blue-400' href="https://github.com/Rambo8390/YogaFit" >GitHub</a>.
+                    This is an open source project, The code is available on the <a className='text-blue-400'
+                        // href="https://github.com/Rambo8390/YogaFit" 
+                        href="https://github.com/Psaw19/Major-Project"
+                        target='_blank'
+                    >GitHub</a>.
 
                     This AI first predicts keypoints or coordinates of different parts of the body(basically where
                     they are present in an image) and then it use another classification model to classify the poses if

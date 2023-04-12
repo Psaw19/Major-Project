@@ -12,14 +12,16 @@ export default function App() {
   return (
     <YogaProvider>
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/start" element={<Yoga />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/tutorials" element={<Tutorials />} />
-          <Route path="/yoga" element={<YogaCanvas />} />
-        </Routes>
+        <div className="w-screen h-screen bg-gradient">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/start" element={<Yoga />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/tutorials" element={<Tutorials />} />
+            <Route path="/yoga" element={<YogaCanvas />} />
+          </Routes>
+        </div>
       </Router>
     </YogaProvider>
   );
